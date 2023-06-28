@@ -1,0 +1,21 @@
+{
+    "name": "alisina/sheypoor",
+    "description": "sheypoor digits task",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alisina\\Sheypoor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AliSina",
+            "email": "alisadeghi.work@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "8.5"
+    }
+}
