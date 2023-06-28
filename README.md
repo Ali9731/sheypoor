@@ -8,4 +8,5 @@
 
 4.for examples "cd src" then "php index.php"
 
-I developed 3 ways for this task and the best practice is with time complexity O(n mod 24) and in the worst case it will be O(24).
+I have developed 3 ways to do this and the best practice is to use mods.
+In this way, the time complexity will be O(n mod 24) and in the worst case O(24).
