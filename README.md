@@ -4,7 +4,7 @@
 
 2.composer install
 
-3.for test run "./vendor/bin/phpunit --verbose tests/DigitsTest.php"
+3.for test run "./vendor/bin/phpunit tests/DigitsTest.php"
 
 4.for examples "cd src" then "php index.php"
 
