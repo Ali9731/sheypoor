@@ -5,8 +5,8 @@ class Digits
 {
     const MAX = 1000000000;
     const MIN = 0;
-    
-    public function digits_sequence_mod($n){ // Best Case
+    // ---------------Best Case------------
+    public function digits_sequence_mod($n){ 
         self::validate($n);
 
           // in this series of numbers , numbers will repeat every 24 numbers and its a cycle.
@@ -28,15 +28,15 @@ class Digits
             }
         return end($arr);
     }
-    // Time complexity : O n mod 24  --> in the worst case it will be : O 24
+    // Time complexity : O n mod 24  --> in the worst case it will be : O(23)
 
     // if you give 1000,000,000 it will be : O 16
 
     // if we want to write the fastest way we can define the repeating cycle as two Constants for less than 24 and more than 24
 
 
-
-    public function digits_sequence_while($n){ // Average case
+    // ---------------Average Case------------
+    public function digits_sequence_while($n){
         self::validate($n);
         if ($n<=1) {
             return $n;
@@ -55,9 +55,9 @@ class Digits
     // Time complexity : O n
 
 
-
-    public function digits_sequence_recursive($n) { //Worst case
-        self::validate($n);
+    // ---------------Worst case------------
+    public function digits_sequence_recursive($n) {
+        //we cant validate here because the validation function runs in every recursive calls
         if($n <= 1){  
             return $n;    
         }  else {  
