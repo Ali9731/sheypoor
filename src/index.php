@@ -5,10 +5,10 @@ use Alisina\Sheypoor\Digits;
 
 
 $digits=new Digits;
-echo  $digits->digits_sequence_mod(6)."\n";
+echo  'mod method(6): '.$digits->digits_sequence_mod(6)."\n";
 
 
-echo  $digits->digits_sequence_while(6)."\n";
+echo  'while method(6): '.$digits->digits_sequence_while(6)."\n";
 
 
-echo  $digits->digits_sequence_recursive(6)."\n";
+echo  'recursive method(6): '.$digits->digits_sequence_recursive(6)."\n";

@@ -3,7 +3,11 @@ namespace Alisina\Sheypoor;
 
 class Digits
 {
+    const MAX = 1000000000;
+    const MIN = 0;
+    
     public function digits_sequence_mod($n){ // Best Case
+        self::validate($n);
 
           // in this series of numbers , numbers will repeat every 24 numbers and its a cycle.
         if ($n==0) return 0;
@@ -32,10 +36,13 @@ class Digits
 
 
 
-    public function digits_sequence_while($n,$num1= 0,$num2= 1){ // Average case
+    public function digits_sequence_while($n){ // Average case
+        self::validate($n);
         if ($n<=1) {
             return $n;
         }
+        $num1= 0;
+        $num2= 1;
         $counter= 1; 
         while($counter < $n){
             $num3= array_sum(str_split($num2))+array_sum(str_split($num1));
@@ -50,6 +57,7 @@ class Digits
 
 
     public function digits_sequence_recursive($n) { //Worst case
+        self::validate($n);
         if($n <= 1){  
             return $n;    
         }  else {  
@@ -58,4 +66,15 @@ class Digits
     }
     // Time complexity : O 2^n
 
+
+    protected static function validate($n)
+    {
+        if (!is_integer($n)) {
+            throw new \InvalidArgumentException('Application only accepts integers. Input was: ' . $n);
+        }
+
+        if ($n < self::MIN or $n > self::MAX) {
+            throw new \OutOfRangeException('Input must be a between '.self::MIN.' and ' . self::MAX);
+        }
+    }
 }
